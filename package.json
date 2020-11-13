@@ -1,0 +1,33 @@
+{
+  "name": "react-native-kpframework-gallery",
+  "version": "0.4.5",
+  "description": "Displaying photo gallery",
+  "main": "index.js",
+  "author": {
+    "name": "xukj",
+    "email": "xuwaer@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "android",
+    "gallery",
+    "pinch",
+    "pinch-to-zoom",
+    "mobile",
+    "subsampling-scale-image-view"
+  ],
+  "homepage": "https://github.com/kpReactComponent/react-native-kpframework-gallery.git",
+  "bugs": {
+    "url": "https://github.com/kpReactComponent/react-native-kpframework-gallery/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kpReactComponent/react-native-kpframework-gallery.git"
+  },
+  "devDependencies": {
+    "react-native": "^0.61.3"
+  }
+}

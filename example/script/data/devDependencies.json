@@ -1,0 +1,4 @@
+{
+  "@babel/plugin-proposal-decorators": "7.0.0-beta.47",
+  "babel-preset-react-native": "5.0.2"
+}

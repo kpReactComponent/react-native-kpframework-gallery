@@ -1,0 +1,6 @@
+framework module KPGallery {
+  umbrella header "KPGallery.h"
+
+  export *
+  module * { export * }
+}

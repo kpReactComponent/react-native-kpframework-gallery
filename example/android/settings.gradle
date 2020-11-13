@@ -1,0 +1,5 @@
+rootProject.name = 'RNDemo02'
+include ':react-native-kpframework-gallery'
+project(':react-native-kpframework-gallery').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-kpframework-gallery/android')
+
+include ':app'

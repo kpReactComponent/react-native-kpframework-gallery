@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/kp_fill"
+    xmlns:gallery="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.xukj.kpframework.gallery.KPViewPager
+        android:id="@+id/horizontal_pager"
+        style="@style/kp_fill" />
+
+    <com.xukj.kpframework.gallery.ViewPagerBar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        gallery:right_button_visible="false"
+        gallery:title_background_color="@android:color/transparent"
+        gallery:left_button_visible="true"
+        gallery:left_button_drawable="@drawable/ic_close"/>
+
+    <com.xukj.kpframework.gallery.ViewPageTextView
+        android:id="@+id/notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="12dp"
+        android:max="100"
+        android:paddingRight="12dp"
+        android:paddingTop="3dp"
+        android:visibility="invisible"
+        style="@android:style/Widget.SeekBar" />
+
+    <!--<Button-->
+    <!--android:text="原生按钮_点击退出"-->
+    <!--android:onClick="onBack"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"/>-->
+
+</RelativeLayout>

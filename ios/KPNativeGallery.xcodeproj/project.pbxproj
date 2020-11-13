@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		399D8175226EFE62008D8765 /* KPNativeGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 399D8174226EFE62008D8765 /* KPNativeGallery.m */; };
+		399D8188226EFFA6008D8765 /* KPGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399D8182226EFF59008D8765 /* KPGallery.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		399D8181226EFF59008D8765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 399D817D226EFF59008D8765 /* KPGallery.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 399D8027226EF533008D8765;
+			remoteInfo = KPGallery;
+		};
+		399D8189226EFFDD008D8765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 399D817D226EFF59008D8765 /* KPGallery.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 399D8026226EF533008D8765;
+			remoteInfo = KPGallery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		399D8170226EFE62008D8765 /* libKPNativeGallery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKPNativeGallery.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		399D8173226EFE62008D8765 /* KPNativeGallery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPNativeGallery.h; sourceTree = "<group>"; };
+		399D8174226EFE62008D8765 /* KPNativeGallery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPNativeGallery.m; sourceTree = "<group>"; };
+		399D817D226EFF59008D8765 /* KPGallery.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KPGallery.xcodeproj; path = KPGallery/KPGallery.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		399D816D226EFE62008D8765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				399D8188226EFFA6008D8765 /* KPGallery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		399D8167226EFE62008D8765 = {
+			isa = PBXGroup;
+			children = (
+				399D8172226EFE62008D8765 /* KPNativeGallery */,
+				399D817C226EFF3F008D8765 /* Libraries */,
+				399D8171226EFE62008D8765 /* Products */,
+				399D8186226EFFA6008D8765 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		399D8171226EFE62008D8765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				399D8170226EFE62008D8765 /* libKPNativeGallery.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		399D8172226EFE62008D8765 /* KPNativeGallery */ = {
+			isa = PBXGroup;
+			children = (
+				399D8173226EFE62008D8765 /* KPNativeGallery.h */,
+				399D8174226EFE62008D8765 /* KPNativeGallery.m */,
+			);
+			path = KPNativeGallery;
+			sourceTree = "<group>";
+		};
+		399D817C226EFF3F008D8765 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				399D817D226EFF59008D8765 /* KPGallery.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		399D817E226EFF59008D8765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				399D8182226EFF59008D8765 /* KPGallery.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		399D8186226EFFA6008D8765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		399D816F226EFE62008D8765 /* KPNativeGallery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 399D8179226EFE62008D8765 /* Build configuration list for PBXNativeTarget "KPNativeGallery" */;
+			buildPhases = (
+				399D816C226EFE62008D8765 /* Sources */,
+				399D816D226EFE62008D8765 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				399D818A226EFFDD008D8765 /* PBXTargetDependency */,
+			);
+			name = KPNativeGallery;
+			productName = KPNativeGallery;
+			productReference = 399D8170226EFE62008D8765 /* libKPNativeGallery.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		399D8168226EFE62008D8765 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = kpframework;
+				TargetAttributes = {
+					399D816F226EFE62008D8765 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 399D816B226EFE62008D8765 /* Build configuration list for PBXProject "KPNativeGallery" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 399D8167226EFE62008D8765;
+			productRefGroup = 399D8171226EFE62008D8765 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 399D817E226EFF59008D8765 /* Products */;
+					ProjectRef = 399D817D226EFF59008D8765 /* KPGallery.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				399D816F226EFE62008D8765 /* KPNativeGallery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		399D8182226EFF59008D8765 /* KPGallery.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = KPGallery.framework;
+			remoteRef = 399D8181226EFF59008D8765 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		399D816C226EFE62008D8765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				399D8175226EFE62008D8765 /* KPNativeGallery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		399D818A226EFFDD008D8765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KPGallery;
+			targetProxy = 399D8189226EFFDD008D8765 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		399D8177226EFE62008D8765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		399D8178226EFE62008D8765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		399D817A226EFE62008D8765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/KPNativeGallery/build/Debug-iphoneos";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../react-native/Libraries/Image/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		399D817B226EFE62008D8765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/KPNativeGallery/build/Debug-iphoneos";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/../../react-native/Libraries/Image/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		399D816B226EFE62008D8765 /* Build configuration list for PBXProject "KPNativeGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				399D8177226EFE62008D8765 /* Debug */,
+				399D8178226EFE62008D8765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		399D8179226EFE62008D8765 /* Build configuration list for PBXNativeTarget "KPNativeGallery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				399D817A226EFE62008D8765 /* Debug */,
+				399D817B226EFE62008D8765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 399D8168226EFE62008D8765 /* Project object */;
+}
