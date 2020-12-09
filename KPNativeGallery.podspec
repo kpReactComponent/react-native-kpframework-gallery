@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => homepage, :tag => 'v#{version}'}
   s.source_files = 'ios/KPNativeGallery/*.{h,m}'
   s.platform     = :ios, "8.0"
-  s.dependency 'KPGallery', '~> 0.2.5'
+  s.dependency 'KPGallery', '~> 0.2.6'
   s.dependency 'React-Core'
 end
