@@ -17,6 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.ImageViewState;
@@ -55,7 +56,9 @@ public class KPGalleryViewItem extends RelativeLayout {
         mProgress.setVisibility(View.VISIBLE);
         mTextView.setText("");
         mTextView.setVisibility(View.GONE);
+        RequestOptions options = new RequestOptions().override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
         Glide.with(this).asFile().load(image.getUri())
+                .apply(options)
                 .listener(new RequestListener<File>() {
 
                     @Override
