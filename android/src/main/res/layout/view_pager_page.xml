@@ -9,7 +9,6 @@
     <ImageView
         android:id="@+id/ivGif"
         style="@style/kp_fill"
-        android:scaleType="centerInside"
         android:visibility="gone" />
 
     <ProgressBar
