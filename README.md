@@ -131,7 +131,7 @@ KPGallery.showGallery({ images },
 | debug       | 是否开启 debug 模式,仅 android 端有效 | bool   | false              |
 | minScale    | 最小缩放比例，`mode`为`custom`时有效  | number | 0.5 / iOS 固定为 1 |
 | maxScale    | 最大缩放比例，`mode`为`custom`时有效  | number | 2                  |
-| mode        | 图片显示模式`inside` `crop` `custom`  | string | `insde`            |
+| mode        | 图片显示模式`inside` `crop` `custom`,对gif图片无效。目前gif图片不支持缩放功能  | string | `insde`            |
 | orientation | 横竖屏`auto` `portrait` `landscape`   | string | `auto`             |
 | seek        | 是否显示可拖动的进度条                | bool   | false              |
 
