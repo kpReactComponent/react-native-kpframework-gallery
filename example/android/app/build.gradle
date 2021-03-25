@@ -141,6 +141,9 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "androidx.appcompat:appcompat:${rootProject.ext.androidXCore}" // com.android.support:appcompat-v7:27.1.0
     implementation "com.facebook.react:react-native:+"
+
+    // 减少android加载大图片超时的概率 
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.8.0@aar'
 }
 
 // Run this once to be able to run the application with BUCK
