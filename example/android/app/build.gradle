@@ -139,7 +139,7 @@ android {
 dependencies {
     implementation project(':react-native-kpframework-gallery')
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.androidXCore}" // com.android.support:appcompat-v7:27.1.0
     implementation "com.facebook.react:react-native:+"
 }
 
