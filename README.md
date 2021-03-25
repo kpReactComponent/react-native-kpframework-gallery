@@ -7,7 +7,7 @@
 
 ## 兼容
   
-version 0.4.x requires react-native >= 0.61.0
+version 0.4.x requires `react-native >= 0.61.0` `androidx`
 version 0.3.x requires react-native >= 0.56.0
 
 ## 原生库
