@@ -53,7 +53,7 @@ export default class GalleryPage extends React.PureComponent {
                         orientation: 'auto',
                         seek: true,
                     }}
-                    onPageChanged={index => console.log('onPageChanged:' + index)}
+                    onPageChanged={(index) => console.log('onPageChanged:' + index)}
                     onClosePress={() => {
                         console.log('关闭按钮点击');
                         Actions.pop();
@@ -72,6 +72,16 @@ const styles = StyleSheet.create({
 });
 
 const images = [
+    {
+        source: {
+            uri: 'https://z3.ax1x.com/2021/03/25/6LDMF0.gif',
+        },
+    },
+    {
+        source: {
+            uri: 'https://z3.ax1x.com/2021/03/25/6OiSnx.gif',
+        },
+    },
     {
         source: require('../home/test00.png'),
         mode: 'crop',

@@ -12,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -34,6 +35,7 @@ public class ViewPagerFragment extends Fragment {
 
     private PhotoImage image;
     private SubsamplingScaleImageView mImageView;
+    private ImageView mGIF;
     private ProgressBar mProgress;
     private TextView mTextView;
 
@@ -58,6 +60,7 @@ public class ViewPagerFragment extends Fragment {
             }
         }
 
+        mGIF = rootView.findViewById(R.id.ivGif);
         mImageView = rootView.findViewById(R.id.imageView);
         mProgress = rootView.findViewById(R.id.loading);
         mTextView = rootView.findViewById(R.id.info);
@@ -88,33 +91,66 @@ public class ViewPagerFragment extends Fragment {
 
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<File> target, boolean isFirstResource) {
-                        mProgress.setVisibility(View.GONE);
-                        mTextView.setText("图片加载失败");
-                        mTextView.setVisibility(View.VISIBLE);
+                        useErrorTextView();
                         return false;
                     }
 
                     @Override
                     public boolean onResourceReady(File resource, Object model, Target<File> target, DataSource dataSource, boolean isFirstResource) {
-                        String mode = image.getMode() != null ? image.getMode() : "inside";
-                        switch (mode) {
-                            case "custom":
-                                setCustomMode(resource, image);
-                                break;
-                            case "crop":
-                                setCropMode(resource, image);
-                                break;
-                            default:
-                                setInsideMode(resource, image);
-                                break;
+                        boolean isGif = false;
+                        try {
+                            isGif = PhotoImage.isGif(resource.getPath());
+                        } catch (Exception e) {
+                            // do nothing
                         }
 
-                        mTextView.setVisibility(View.GONE);
-                        mProgress.setVisibility(View.GONE);
+                        if (isGif) {
+                            useGifImageView(resource);
+                        }
+                        else {
+                            useNormalImageView(resource);
+                        }
+
                         return false;
                     }
                 }).submit();
 
+    }
+
+    private void useErrorTextView() {
+        mProgress.setVisibility(View.GONE);
+        mTextView.setText("图片加载失败");
+        mTextView.setVisibility(View.VISIBLE);
+        mImageView.setVisibility(View.GONE);
+        mGIF.setVisibility(View.GONE);
+    }
+
+    private void useGifImageView(File resource) {
+        mTextView.setVisibility(View.GONE);
+        mProgress.setVisibility(View.GONE);
+        mImageView.setVisibility(View.GONE);
+        mGIF.setVisibility(View.VISIBLE);
+        Glide.with(this).asGif().load(resource).into(mGIF);
+    }
+
+    private void useNormalImageView(File resource) {
+        String mode = image.getMode() != null ? image.getMode() : "inside";
+        switch (mode) {
+            case "custom":
+                setCustomMode(resource, image);
+                break;
+            case "crop":
+                setCropMode(resource, image);
+                break;
+            default:
+                setInsideMode(resource, image);
+                break;
+        }
+
+        mTextView.setVisibility(View.GONE);
+        mProgress.setVisibility(View.GONE);
+        mGIF.setVisibility(View.GONE);
+        mImageView.setVisibility(View.VISIBLE);
     }
 
     /**

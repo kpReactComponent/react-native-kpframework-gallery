@@ -6,6 +6,12 @@
         android:id="@+id/imageView"
         style="@style/kp_fill" />
 
+    <ImageView
+        android:id="@+id/ivGif"
+        style="@style/kp_fill"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
     <ProgressBar
         android:id="@+id/loading"
         style="?android:progressBarStyle"

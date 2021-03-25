@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class KPGalleryViewItem extends RelativeLayout {
     private SubsamplingScaleImageView mImageView;
     private ProgressBar mProgress;
     private TextView mTextView;
+    private ImageView mGIF;
 
     public KPGalleryViewItem(Context context) {
         super(context);
@@ -49,6 +51,7 @@ public class KPGalleryViewItem extends RelativeLayout {
         mImageView = this.findViewById(R.id.imageView);
         mProgress = this.findViewById(R.id.loading);
         mTextView = this.findViewById(R.id.info);
+        mGIF = this.findViewById(R.id.ivGif);
     }
 
     public void loadPhotoImage(final PhotoImage image) {
@@ -63,34 +66,66 @@ public class KPGalleryViewItem extends RelativeLayout {
 
                     @Override
                     public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<File> target, boolean isFirstResource) {
-                        mProgress.setVisibility(View.GONE);
-                        mTextView.setText("图片加载失败");
-                        mTextView.setVisibility(View.VISIBLE);
+                        useErrorTextView();
                         return false;
                     }
 
                     @Override
                     public boolean onResourceReady(File resource, Object model, Target<File> target, DataSource dataSource, boolean isFirstResource) {
-                        Log.i("photo", "图片加载完成");
-                        String mode = image.getMode() != null ? image.getMode() : "inside";
-                        switch (mode) {
-                            case "custom":
-                                setCustomMode(resource, image);
-                                break;
-                            case "crop":
-                                setCropMode(resource, image);
-                                break;
-                            default:
-                                setInsideMode(resource, image);
-                                break;
+                        boolean isGif = false;
+                        try {
+                            isGif = PhotoImage.isGif(resource.getPath());
+                        } catch (Exception e) {
+                            // do nothing
                         }
 
-                        mTextView.setVisibility(View.GONE);
-                        mProgress.setVisibility(View.GONE);
+                        if (isGif) {
+                            useGifImageView(resource, image);
+                        }
+                        else {
+                            useNormalImageView(resource, image);
+                        }
+
                         return false;
                     }
                 }).submit();
 
+    }
+
+    private void useErrorTextView() {
+        mProgress.setVisibility(View.GONE);
+        mTextView.setText("图片加载失败");
+        mTextView.setVisibility(View.VISIBLE);
+        mImageView.setVisibility(View.GONE);
+        mGIF.setVisibility(View.GONE);
+    }
+
+    private void useGifImageView(File resource, PhotoImage image) {
+        mTextView.setVisibility(View.GONE);
+        mProgress.setVisibility(View.GONE);
+        mImageView.setVisibility(View.GONE);
+        mGIF.setVisibility(View.VISIBLE);
+        Glide.with(this).asGif().load(resource).into(mGIF);
+    }
+
+    private void useNormalImageView(File resource, PhotoImage image) {
+        String mode = image.getMode() != null ? image.getMode() : "inside";
+        switch (mode) {
+            case "custom":
+                setCustomMode(resource, image);
+                break;
+            case "crop":
+                setCropMode(resource, image);
+                break;
+            default:
+                setInsideMode(resource, image);
+                break;
+        }
+
+        mTextView.setVisibility(View.GONE);
+        mProgress.setVisibility(View.GONE);
+        mGIF.setVisibility(View.GONE);
+        mImageView.setVisibility(View.VISIBLE);
     }
 
     /**

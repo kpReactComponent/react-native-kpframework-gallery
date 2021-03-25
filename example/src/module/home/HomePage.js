@@ -39,10 +39,29 @@ export default class HomePage extends React.PureComponent {
      * @description 点击详情
      */
     _onPress = () => {
-        const largeImages = images.concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images).concat(images);
+        const largeImages = images
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images)
+            .concat(images);
         KPGallery.showGallery(
             { images: largeImages, debug: true, mode: 'crop', orientation: 'auto', seek: true },
-            index => {
+            (index) => {
                 this.setState({ message: `页面 ${index}` });
             },
             () => {
@@ -52,7 +71,7 @@ export default class HomePage extends React.PureComponent {
     };
 
     _onSizePress = () => {
-        KPGallery.getCacheSize().then(size => {
+        KPGallery.getCacheSize().then((size) => {
             this.setState({ message: size });
         });
     };
@@ -62,7 +81,7 @@ export default class HomePage extends React.PureComponent {
             .then(() => {
                 this.setState({ message: '清空完毕' });
             })
-            .catch(error => {
+            .catch((error) => {
                 this.setState({ message: error.message });
             });
     };
@@ -73,6 +92,16 @@ export default class HomePage extends React.PureComponent {
 }
 
 const images = [
+    {
+        source: {
+            uri: 'https://z3.ax1x.com/2021/03/25/6LDMF0.gif',
+        },
+    },
+    {
+        source: {
+            uri: 'https://z3.ax1x.com/2021/03/25/6OiSnx.gif',
+        },
+    },
     {
         source: require('./test00.png'),
         mode: 'crop',

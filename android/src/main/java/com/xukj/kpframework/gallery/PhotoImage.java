@@ -1,5 +1,6 @@
 package com.xukj.kpframework.gallery;
 
+import android.graphics.BitmapFactory;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -57,6 +58,13 @@ public class PhotoImage implements Parcelable {
             return new PhotoImage[i];
         }
     };
+
+    public static boolean isGif(String filePath) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(filePath, options);
+        return options.outMimeType.toLowerCase().contains("gif");
+    }
 
     public String getUri() {
         return uri;
